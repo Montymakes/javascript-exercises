@@ -1,5 +1,11 @@
-const reverseString = function() {
+const reverseString = function(string) {
+ let newString = '';
+ for (let i = string.length - 1; i > -1; i--) {
+    const char = string.at(i);
+    newString += char;
+ }
 
+ return newString;
 };
 
 // Do not edit below this line
