@@ -1,12 +1,7 @@
-const removeFromArray = function(array, first, second = undefined, third = undefined, fourth = undefined) {
-    const newArray = array.filter((element)=> {
-        if (element !== first
-            && element !== second
-            && element !== third
-            && element !== fourth
-        ) return element
-    })
+const removeFromArray = function(array, ...args) {
+    const newArray = array.filter((element) => !(args.includes(element)));
     return newArray;
 };
+console.log(removeFromArray([1,2,3,"4",4], 1, "4"));
 // Do not edit below this line
 module.exports = removeFromArray;
